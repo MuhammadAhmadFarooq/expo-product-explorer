@@ -34,7 +34,7 @@ jobs:
         run: pnpm lint
 
       - name: Typecheck
-        run: pnpm typecheck
+        run: pnpm typecheck --broken-ci-demo
 
       - name: Validate Expo project
         run: pnpm dlx expo-doctor
