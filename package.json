@@ -1,5 +1,6 @@
 {
   "name": "expo-product-explorer",
+  "packageManager": "pnpm@11.25.0",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "dependencies": {
