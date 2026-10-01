@@ -1,0 +1,43 @@
+name: Expo CI
+
+on:
+  push:
+    branches:
+      - main
+      - 'feature/**'
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Lint, typecheck, and bundle
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up pnpm and Node.js
+        uses: pnpm/setup@v3
+        with:
+          version: 11.25.0
+          runtime: node@22
+          cache: true
+          frozen-lockfile: true
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Validate Expo project
+        run: pnpm dlx expo-doctor
+
+      - name: Build web bundle
+        run: pnpm exec expo export --platform web
