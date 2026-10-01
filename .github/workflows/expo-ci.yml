@@ -28,13 +28,12 @@ jobs:
           version: 11.25.0
           runtime: node@22
           cache: true
-          frozen-lockfile: true
 
       - name: Lint
         run: pnpm lint
 
       - name: Typecheck
-        run: pnpm typecheck --broken-ci-demo
+        run: pnpm typecheck
 
       - name: Validate Expo project
         run: pnpm dlx expo-doctor
