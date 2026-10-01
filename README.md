@@ -1,4 +1,17 @@
-# Welcome to your Expo app 👋
+# Expo Product Explorer
+
+An Expo Router app by Muhammad Ahmad Farooq (22i-2711) for browsing, searching,
+filtering, and saving products. The interface follows Expo guidance gathered
+through Expo MCP, including accessible labels, live result updates, and touch
+targets sized for mobile use.
+
+## Continuous integration
+
+The `Expo CI` GitHub Actions workflow runs linting, TypeScript checks, Expo
+Doctor, and a web export on pushes to `main`, pushes to `feature/**`, and pull
+requests targeting `main`.
+
+## Expo starter guide
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
